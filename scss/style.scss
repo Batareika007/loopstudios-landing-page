@@ -1,5 +1,5 @@
 @import 'colors';
-
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
 /** ============== global style ================ */
 *,
@@ -69,6 +69,16 @@ select {
 
 /** ============ start  custom style ============ */
 
+body {
+    font-size: 15px;
+    font-family: 'Alata',
+        sans-serif;
+}
+
+.heading {
+    font-family: 'Josefin Sans',
+        sans-serif;
+}
 
 .container {
     max-width: 1440px;
