@@ -273,7 +273,7 @@ body {
       -ms-flex: 1 0 255px;
           flex: 1 0 255px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   padding: 40px;
   text-transform: uppercase;
   display: -webkit-box;
@@ -287,6 +287,17 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
+  background-position: center center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.cards__item:hover {
+  background-size: 120%;
+  background-position: center top;
+}
+.cards__item:hover h4 {
+  text-shadow: 4px 4px 12px #FFFFFF, 4px -4px 12px #FFFFFF, -4px 4px 12px #FFFFFF, -4px -4px 12px #FFFFFF;
 }
 .cards__item::after {
   position: absolute;
@@ -301,6 +312,8 @@ body {
 .cards__item h4 {
   font-size: 2rem;
   z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .cards__item:nth-child(1) {
   background-image: url(../images/desktop/image-deep-earth.jpg);

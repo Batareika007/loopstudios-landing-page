@@ -268,13 +268,30 @@ body {
         height: 480px;
         flex: 1 0 255px;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100%;
         padding: 40px;
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
+        background-position: center center;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            // transition: 0.5s;
+            background-size: 120%;
+            background-position: center top;
+
+            h4 {
+                text-shadow: 4px 4px 12px #FFFFFF,
+                    4px -4px 12px #FFFFFF,
+                    -4px 4px 12px #FFFFFF,
+                    -4px -4px 12px #FFFFFF;
+
+            }
+        }
 
         &::after {
             position: absolute;
@@ -289,6 +306,7 @@ body {
         h4 {
             font-size: 2rem;
             z-index: 10;
+            transition: 0.5s;
         }
 
         &:nth-child(1) {
