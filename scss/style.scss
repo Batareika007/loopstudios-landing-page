@@ -50,6 +50,7 @@ a:hover,
 a:focus,
 a:active {
     text-decoration: none;
+    color: inherit;
 }
 
 /* remove arrow from select */
@@ -66,6 +67,12 @@ select {
     // background: rgba(0, 0, 255, 0.1);
 }
 
+// remove links style
+
+ul,
+ol {
+    list-style: none;
+}
 
 /** ============ start  custom style ============ */
 
@@ -73,16 +80,205 @@ body {
     font-size: 15px;
     font-family: 'Alata',
         sans-serif;
+    // height: 400vh;
+    overflow-x: hidden;
 }
 
 .heading {
     font-family: 'Josefin Sans',
         sans-serif;
+    font-weight: 400;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1500px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 10%; // 
 }
+
+.header {
+    color: $white;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_logo {
+        width: 205px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.nav {
+
+    &__content {
+        display: flex;
+        gap: 30px;
+
+        &_item:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.header__heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    border: 2px solid $white;
+    padding: 40px 40px 25px;
+    width: 695px;
+    line-height: 190%;
+    letter-spacing: -0.045em;
+    margin-bottom: 88px;
+}
+
+.main {
+    &__top {
+        height: 708px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url(../images/desktop/image-interactive.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 780px; // 780
+        margin-bottom: 190px;
+
+        div {
+            background-color: white;
+            flex: 0 1 577px;
+            padding: 102px 0 0 102px;
+        }
+
+        h2 {
+            font-size: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.015em;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $gray;
+            line-height: 175%;
+            letter-spacing: 0.03em;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-bottom: 85px;
+
+        .heading {
+            font-size: 3.2rem;
+        }
+
+        a {
+            padding: 10px 40px;
+            border: 2px solid $black;
+            letter-spacing: 0.3em;
+            color: $black;
+            background-color: $white;
+
+            &:hover {
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+}
+
+.cards {
+
+    margin-bottom: 150px;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        color: $white;
+        gap: 2.1rem;
+    }
+
+    &__item {
+        height: 480px;
+        width: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 35px 45px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(245, 245, 245, 0) 100%)
+        }
+
+        h4 {
+            font-size: 2rem;
+            z-index: 10;
+        }
+
+        &:nth-child(1) {
+            background-image: url(../images/desktop/image-deep-earth.jpg);
+        }
+
+        &:nth-child(2) {
+            background-image: url(../images/desktop/image-night-arcade.jpg);
+        }
+
+        &:nth-child(3) {
+            background-image: url(../images/desktop/image-soccer-team.jpg);
+        }
+
+        &:nth-child(4) {
+            background-image: url(../images/desktop/image-grid.jpg);
+        }
+
+        &:nth-child(5) {
+            background-image: url(../images/desktop/image-from-above.jpg);
+        }
+
+        &:nth-child(6) {
+            background-image: url(../images/desktop/image-pocket-borealis.jpg);
+        }
+
+        &:nth-child(7) {
+            background-image: url(../images/desktop/image-curiosity.jpg);
+        }
+
+        &:nth-child(8) {
+            background-image: url(../images/desktop/image-fisheye.jpg);
+        }
+    }
+}
+
+
+// .footer {
+//     &__container{}
+//     &__logo{}
+//     &__left{}
+//     &__right{}
+// }
