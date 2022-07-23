@@ -15,44 +15,51 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      padding-bottom: 2rem;
     }
 
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      text-decoration: underline;
     }
   </style>
 </head>
 
-<body class="hide-scroll">
+<body>
   <header class="header">
     <div class="container">
+      <div class="header__inner">
 
-      <div class="header__top">
-        <div class="header__top_logo logo"><a href="#"><img src="images/logo.svg" alt="Loopstudios"></div>
-        <nav class="nav">
-          <ul class="nav__content">
-            <li class="nav__content_item"> <a href="#"> About</a></li>
-            <li class="nav__content_item"> <a href="#"> Careers</a></li>
-            <li class="nav__content_item"> <a href="#"> Events</a></li>
-            <li class="nav__content_item"> <a href="#"> Products</a></li>
-            <li class="nav__content_item"> <a href="#"> Support</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__heading">
-        <h1 class="heading">
-          Immersive experiences that deliver
-        </h1>
+        <div class="header__top">
+
+          <div class="header__top_logo logo"><a href="index.html"><img src="images/logo.svg" alt="Loopstudios"></div>
+          <nav class="nav">
+            <ul class="nav__content">
+              <li class="nav__content_item hover-effect"> <a href="#"> About</a></li>
+              <li class="nav__content_item hover-effect"> <a href="#"> Careers</a></li>
+              <li class="nav__content_item hover-effect"> <a href="#"> Events</a></li>
+              <li class="nav__content_item hover-effect"> <a href="#"> Products</a></li>
+              <li class="nav__content_item hover-effect"> <a href="#"> Support</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__top_hamburger"><img src="images/icon-hamburger.svg" alt="hamburger menu"></div>
+        </div>
+
+        <div class="header__heading">
+          <h1 class="heading">
+            Immersive experiences that deliver
+          </h1>
+        </div>
+
       </div>
     </div>
   </header>
 
   <main class="main">
-
+    <!-- top -->
     <div class="container">
       <section class="main__top">
-        <div>
-
+        <div class="main__top_text">
           <h2 class="heading">The leader in interactive VR</h2>
 
           <p>Founded in 2011, Loopstudios has been producing world-class virtual reality
@@ -63,14 +70,15 @@
       </section>
     </div>
 
-
+    <!-- text + link -->
 
     <div class="container">
-      <div class="main__text">
+      <div class="main__inner">
+        <div class="main__inner_text">
+          <h3 class="heading">Our creations</h3>
 
-        <h3 class="heading">Our creations</h3>
-
-        <a href="#">See all</a>
+          <a href="#">See all</a>
+        </div>
       </div>
     </div>
 
@@ -91,7 +99,9 @@
             <h4 class="heading">Soccer team VR</h4>
           </div>
           <div class="cards__item">
-            <h4 class="heading">The grid</h4>
+            <h4 class="heading">
+              The <br> grid
+            </h4>
           </div>
           <div class="cards__item">
             <h4 class="heading">From up above VR</h4>
@@ -113,41 +123,44 @@
 
   </main>
 
-  <!-- 
+
   <footer class="footer">
-    <div class="footer__container" style="color: white; background: black">
-      <div class="container">
+    <div class="container">
+      <div class="footer__container">
 
         <div class="footer__left">
           <div class="footer__logo logo"><a href="#"><img src="images/logo.svg" alt="Loopstudios"></a></div>
-          <ul class="link-list">
-            <li> <a href="#"> About</a></li>
-            <li> <a href="#"> Careers</a></li>
-            <li> <a href="#"> Events</a></li>
-            <li> <a href="#"> Products</a></li>
-            <li> <a href="#"> Support</a></li>
-          </ul>
-        </div>
-        <div class="footer__right">
-          <ul class="link-list">
-            <li> <a href="#"> <img src="images/icon-facebook.svg" alt="facebook"></a></li>
-            <li> <a href="#"> <img src="images/icon-twitter.svg" alt="twitter"> </a></li>
-            <li> <a href="#"> <img src="images/icon-pinterest.svg" alt="pinterest"> </a></li>
-            <li> <a href="#"> <img src="images/icon-instagram.svg" alt="instagram"> </a></li>
+          <ul class="footer__links nav-links">
+            <li class="hover-effect"> <a href="#"> About</a></li>
+            <li class="hover-effect"> <a href="#"> Careers</a></li>
+            <li class="hover-effect"> <a href="#"> Events</a></li>
+            <li class="hover-effect"> <a href="#"> Products</a></li>
+            <li class="hover-effect"> <a href="#"> Support</a></li>
           </ul>
         </div>
 
-        © 2021 Loopstudios. All rights reserved.
+        <div class="footer__right">
+          <ul class="footer__links social-links">
+            <li class="hover-effect"> <a href="#"> <img src="images/icon-facebook.svg" alt="facebook"></a></li>
+            <li class="hover-effect"> <a href="#"> <img src="images/icon-twitter.svg" alt="twitter"> </a></li>
+            <li class="hover-effect"> <a href="#"> <img src="images/icon-pinterest.svg" alt="pinterest"> </a></li>
+            <li class="hover-effect"> <a href="#"> <img src="images/icon-instagram.svg" alt="instagram"> </a></li>
+          </ul>
+          <div class="footer__right_cop">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
+        </div>
+
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
       </div>
     </div>
-  </footer> -->
+  </footer>
 
 
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 
 
 
