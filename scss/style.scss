@@ -74,6 +74,10 @@ ol {
     list-style: none;
 }
 
+.only-mobile {
+    display: none;
+}
+
 /** ============ start  custom style ============ */
 
 body {
@@ -93,7 +97,7 @@ body {
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 10%; // 
+    padding: 0 10%;
 }
 
 
@@ -123,6 +127,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 10vw;
+    overflow-x: hidden;
 
     &__inner {
         height: 100vh;
@@ -178,19 +184,19 @@ body {
 
 .main {
     &__top {
-        height: 100vh;
+        padding-top: 160px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
         background-image: url(../images/desktop/image-interactive.jpg);
         background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 65%;
+        background-position: top left;
+        background-size: 68%;
 
         &_text {
             background-color: white;
-            flex: 0 1 50%;
+            max-width: 550px;
             padding: 10% 0 0 10%;
 
             h2 {
@@ -206,8 +212,6 @@ body {
                 letter-spacing: 0.03em;
             }
         }
-
-
     }
 
     &__inner {
@@ -222,6 +226,7 @@ body {
             align-items: baseline;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
 
             .heading {
                 font-size: 3.2rem;
@@ -257,22 +262,23 @@ body {
     &__item {
         height: 480px;
         flex: 1 0 255px;
-        background-repeat: no-repeat;
-        background-size: 100%;
         padding: 40px;
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
-        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: all 0.5s;
+        background-position: top center;
+        bottom: 0;
         cursor: pointer;
 
         &:hover {
-            // transition: 0.5s;
-            background-size: 120%;
-            background-position: center top;
+            background-size: cover;
+            background-position: top center;
+            bottom: 5px;
 
             h4 {
                 text-shadow: 4px 4px 12px #FFFFFF,
@@ -343,11 +349,13 @@ body {
         min-height: 160px;
         padding: 40px 0;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     &__links {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__logo {
@@ -393,9 +401,27 @@ body {
 @media screen and (max-width:1024px) {}
 
 @media screen and (max-width:768px) {
+    .only-desktop {
+        display: none;
+    }
+
+    .only-mobile {
+        display: block;
+
+        margin-bottom: 124px;
+
+        .main__inner {
+
+            &_text {
+                height: auto;
+            }
+        }
+    }
+
     .header {
         position: relative;
 
+        background-image: url(../images/mobile/image-hero.jpg);
 
         &__top {
             &_hamburger {
@@ -438,6 +464,119 @@ body {
 
     .hover-effect::after {
         top: 40px;
+    }
+
+    .main {
+        &__top {
+            background-position: top center;
+            text-align: center;
+            background-size: contain;
+            background-image: url(../images/mobile/image-interactive.jpg);
+            justify-content: center;
+
+            &_text {
+                padding: 45% 0 0 0;
+                background-color: rgba(255, 255, 255, 0);
+
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &__inner {
+            &_text {
+                height: 15vh;
+                flex-direction: column;
+                justify-content: center;
+
+                .heading {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+
+    .cards {
+        margin-bottom: 60px;
+
+        &__item {
+            height: 200px;
+
+            &:nth-child(1) {
+                background-image: url(../images/mobile/image-deep-earth.jpg);
+            }
+
+            &:nth-child(2) {
+                background-image: url(../images/mobile/image-night-arcade.jpg);
+            }
+
+            &:nth-child(3) {
+                background-image: url(../images/mobile/image-soccer-team.jpg);
+            }
+
+            // Grid new text
+            &:nth-child(4) {
+                background-image: url(../images/mobile/image-grid.jpg);
+            }
+
+            &:nth-child(5) {
+                background-image: url(../images/mobile/image-from-above.jpg);
+            }
+
+            &:nth-child(6) {
+                background-image: url(../images/mobile/image-pocket-borealis.jpg);
+            }
+
+            &:nth-child(7) {
+                background-image: url(../images/mobile/image-curiosity.jpg);
+            }
+
+            &:nth-child(8) {
+                background-image: url(../images/mobile/image-fisheye.jpg);
+            }
+
+            .heading {
+                max-width: 165px;
+            }
+        }
+    }
+
+    .footer {
+        .hover-effect::after {
+            top: 20px;
+        }
+
+        &__container {
+            gap: 60px;
+        }
+
+        &__logo {
+            margin-bottom: 50px;
+        }
+
+
+        &__left,
+        &__right {
+            width: 100%;
+            align-items: center;
+
+        }
+
+        &__left {
+            .footer__links {
+                flex-direction: column;
+                text-align: center;
+
+
+            }
+        }
+
+        &__right {
+            .social-links {
+                margin-bottom: 24px;
+            }
+        }
     }
 }
 

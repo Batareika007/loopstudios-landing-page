@@ -75,6 +75,10 @@ ol {
   list-style: none;
 }
 
+.only-mobile {
+  display: none;
+}
+
 /** ============ start  custom style ============ */
 body {
   font-size: 15px;
@@ -120,6 +124,8 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 10vw;
+  overflow-x: hidden;
 }
 .header__inner {
   height: 100vh;
@@ -174,7 +180,7 @@ body {
 }
 
 .main__top {
-  height: 100vh;
+  padding-top: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,14 +196,12 @@ body {
           align-items: flex-end;
   background-image: url(../images/desktop/image-interactive.jpg);
   background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 65%;
+  background-position: top left;
+  background-size: 68%;
 }
 .main__top_text {
   background-color: white;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  max-width: 550px;
   padding: 10% 0 0 10%;
 }
 .main__top_text h2 {
@@ -238,6 +242,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .main__inner_text .heading {
   font-size: 3.2rem;
@@ -274,8 +280,6 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 255px;
           flex: 1 0 255px;
-  background-repeat: no-repeat;
-  background-size: 100%;
   padding: 40px;
   text-transform: uppercase;
   display: -webkit-box;
@@ -289,14 +293,18 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  background-position: top center;
+  bottom: 0;
   cursor: pointer;
 }
 .cards__item:hover {
-  background-size: 120%;
-  background-position: center top;
+  background-size: cover;
+  background-position: top center;
+  bottom: 5px;
 }
 .cards__item:hover h4 {
   text-shadow: 4px 4px 12px #FFFFFF, 4px -4px 12px #FFFFFF, -4px 4px 12px #FFFFFF, -4px -4px 12px #FFFFFF;
@@ -352,6 +360,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -360,6 +370,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .footer__logo {
   max-width: 145px;
@@ -400,8 +412,19 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .only-desktop {
+    display: none;
+  }
+  .only-mobile {
+    display: block;
+    margin-bottom: 124px;
+  }
+  .only-mobile .main__inner_text {
+    height: auto;
+  }
   .header {
     position: relative;
+    background-image: url(../images/mobile/image-hero.jpg);
   }
   .header__top_hamburger {
     display: unset;
@@ -441,5 +464,92 @@ body {
   }
   .hover-effect::after {
     top: 40px;
+  }
+  .main__top {
+    background-position: top center;
+    text-align: center;
+    background-size: contain;
+    background-image: url(../images/mobile/image-interactive.jpg);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main__top_text {
+    padding: 45% 0 0 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .main__top_text h2 {
+    font-size: 30px;
+  }
+  .main__inner_text {
+    height: 15vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main__inner_text .heading {
+    font-size: 1.9rem;
+  }
+  .cards {
+    margin-bottom: 60px;
+  }
+  .cards__item {
+    height: 200px;
+  }
+  .cards__item:nth-child(1) {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+  }
+  .cards__item:nth-child(2) {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+  }
+  .cards__item:nth-child(3) {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+  }
+  .cards__item:nth-child(4) {
+    background-image: url(../images/mobile/image-grid.jpg);
+  }
+  .cards__item:nth-child(5) {
+    background-image: url(../images/mobile/image-from-above.jpg);
+  }
+  .cards__item:nth-child(6) {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+  }
+  .cards__item:nth-child(7) {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+  }
+  .cards__item:nth-child(8) {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+  }
+  .cards__item .heading {
+    max-width: 165px;
+  }
+  .footer .hover-effect::after {
+    top: 20px;
+  }
+  .footer__container {
+    gap: 60px;
+  }
+  .footer__logo {
+    margin-bottom: 50px;
+  }
+  .footer__left, .footer__right {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__left .footer__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .footer__right .social-links {
+    margin-bottom: 24px;
   }
 }
